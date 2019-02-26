@@ -11,9 +11,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
 
   s.source_files = 'Source/*.swift'
+  s.resources = 'Resources/*.js'
 
   s.swift_version = '4.2'
 end
-
-
-
