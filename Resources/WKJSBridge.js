@@ -51,7 +51,7 @@ Object.defineProperty(window.wkjsbridge, "postMessageToJS", {
 /*
  @public native 调用 js response
 
- window.wkjsbridge.postMessageToJSResponse(responseMessage);
+    window.wkjsbridge.postMessageToJSResponse(responseMessage);
  */
 Object.defineProperty(window.wkjsbridge, "postMessageToJSResponse", {
     writable: false,
