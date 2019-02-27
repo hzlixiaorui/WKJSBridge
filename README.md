@@ -1,6 +1,6 @@
 # WKJSBridge
 
-A type-safe JSBridge for WKWebView build on pure Swift.
+A type-safe JSBridge for WKWebView build on pure Swift.  
 一个用 Swift 实现的用于WKWebView的 类型安全的 JSBridge。
 
 # How to install
@@ -20,7 +20,7 @@ end
 
 ## Your native code:
 
-Install:
+Install:  
 创建 JSBridge，并注册 webview
 
 ```swift
@@ -33,7 +33,7 @@ let jsbridge = WKJSBridge()
 jsbridge.register(webview)
 ```
 
-Declare your module or handler:
+Declare your module or handler:  
 声明一个调用 JS 的模块逻辑和一个处理 JS 逻辑的模块
 
 ```swift
@@ -79,7 +79,7 @@ final class ThemePrefHandler: WKJSHandlerType {
 }
 ```
 
-Register module & handler:
+Register module & handler:  
 将声明好的模块注册到 bridge
 
 ```swift
@@ -95,7 +95,7 @@ jsbridge.postFrom(PreferenceControl.self) { $0.scroll(to: .about) }
 ```
 ## Your js code
 
-Declear handler:
+Declear handler:  
 JS 声明 native 模块的处理逻辑，类似 NodeJS 的 Event，支持注册多次
 
 ```js
@@ -104,7 +104,7 @@ window.wkjsbridge.on("PreferenceControl", "scrollToArea", function() {
 });
 ```
 
-JS call Native:
+JS call Native:  
 JS 调用 native 的 handler 模块
 
 ```js
