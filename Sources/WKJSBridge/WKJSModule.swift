@@ -1,7 +1,11 @@
 
 
+/// WKJSModule
+///
+/// 用于声明一个调用 JS 的模块逻辑
 public protocol WKJSModule {
 
+    /// 模块名称
     static var name: String { get }
 
 }

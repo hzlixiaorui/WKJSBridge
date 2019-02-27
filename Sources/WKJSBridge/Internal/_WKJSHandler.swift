@@ -1,5 +1,5 @@
 
-
+/// 默认注册的 handler，用于处理 JSReady 逻辑
 internal final class _WKJSHandler: WKJSHandlerType {
 
     private(set) var isReady: Bool = false

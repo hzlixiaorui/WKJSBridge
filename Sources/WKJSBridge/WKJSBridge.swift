@@ -121,6 +121,9 @@ extension WKJSBridge {
 
 extension WKJSBridge {
 
+    /// 通过模块发送消息到 JS
+    ///
+    ///     wkjsbridge.postFrom(ModuleName.self, { $0.doSomething() })
     public func postFrom<M>(_ moduleInterface: M.Type = M.self, _ action: (M) -> WKJSMessageMeta?) where M: WKJSModule {
         guard let m = _module(for: moduleInterface.name) as? M,
               let messageMeta = action(m) else { return }

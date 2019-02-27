@@ -1,7 +1,8 @@
 
-
+/// WKJSWebViewHandler 处理 WKJSWebView 与 WKJSBridged 的交互逻辑
 internal class WKJSWebViewHandler: NSObject, WKScriptMessageHandler {
 
+    /// 挂载在 JS 环境中的 host 名称
     let hostname: String
 
     private var handle: ((WKJSMessage) -> Void)?

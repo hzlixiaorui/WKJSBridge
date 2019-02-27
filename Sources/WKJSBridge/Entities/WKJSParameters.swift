@@ -1,6 +1,7 @@
 
 extension String {
 
+    /// 将 String 解析为参数
     public func decodeWKJSParams<T>(to param: T.Type) -> T? where T: Decodable {
         guard let data = self.data(using: .utf8),
               let param = try? WKJSBridge.jsonDecoder.decode(WKJSDecodeParam<T>.self, from: data) else { return nil }
@@ -11,6 +12,7 @@ extension String {
 
 extension Encodable {
 
+    /// 编译参数为String
     public var encodeWKJSParams: String {
         return WKJSEncodeParam<Self>(data: self).encodeWKJSString
     }
